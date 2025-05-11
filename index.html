@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill-Based Job Role Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Skill-Based Job Role Predictor</h1>
+        <p>Created by Elsultan Baitzhanov</p>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <h2>About the Project</h2>
+        <p>
+            This project predicts job roles based on a set of user-inputted skills. The model was trained using a Random Forest algorithm to classify the most suitable job titles from a given skillset.
+            Our model has been trained on job listings and skill profiles and demonstrates strong accuracy in predicting career roles based on a person's qualifications.
+        </p>
+    </div>
+</section>
+
+<section id="how-it-works">
+    <div class="container">
+        <h2>How It Works</h2>
+        <p>
+            The Skill-Based Job Role Predictor uses supervised machine learning to classify job titles based on skills provided by the user. The workflow involves the following steps:
+        </p>
+        <ul>
+            <li><strong>Data Preprocessing:</strong> Cleaning and transforming job listings data.</li>
+            <li><strong>Feature Engineering:</strong> Extracting features like skills and job descriptions using TF-IDF.</li>
+            <li><strong>Model Training:</strong> Training a Random Forest model to classify job roles based on input skills.</li>
+            <li><strong>Prediction:</strong> Predicting the most suitable job role based on user skills.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="try-now">
+    <div class="container">
+        <h2>Try It Now</h2>
+        <p>Enter your skills below and predict the most suitable job role for you:</p>
+        <form id="jobRoleForm">
+            <label for="skills">Skills (comma separated):</label>
+            <input type="text" id="skills" placeholder="e.g., Python, Java, SQL, Machine Learning" required>
+            <button type="submit">Predict Job Role</button>
+        </form>
+        <div id="predictionResult" style="display:none;">
+            <h3>Predicted Job Role:</h3>
+            <p id="jobRole"></p>
+        </div>
+    </div>
+</section>
+<section id="model-insights">
+    <div class="container">
+        <h2>Model Insights</h2>
+        <p>Here is a visualization of the feature importance in the model. It shows which features (skills) have the most impact on predicting the job roles:</p>
+        <canvas id="featureImportanceChart"></canvas>
+    </div>
+</section>
+
+<section id="results">
+    <div class="container">
+        <h2>Key Results</h2>
+        <p>The model achieved an accuracy of 95% on the test dataset. Below is the confusion matrix that illustrates the model's performance across different job categories:</p>
+        <img src="confusion_matrix.png" alt="Confusion Matrix" class="confusion-matrix">
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>Created by <strong>Elsultan Baitzhanov</strong></p>
+        <p>View the source code on <a href="https://github.com/your-repo-link" target="_blank">GitHub</a>.</p>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
